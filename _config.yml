@@ -92,3 +92,4 @@ exclude:
   - tools
   - Gemfile
   - Gemfile.lock
+  - .github
