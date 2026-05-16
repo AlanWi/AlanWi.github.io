@@ -1,0 +1,15 @@
+- type: github
+  icon: "fab fa-github"
+  url: "https://github.com/AlanWi"
+
+# - type: twitter
+#   icon: "fa-brands fa-x-twitter"
+#   url: ""
+
+# - type: email
+#   icon: "fas fa-envelope"
+#   noblank: true
+
+# - type: rss
+#   icon: "fas fa-rss"
+#   noblank: true

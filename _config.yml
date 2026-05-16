@@ -1,30 +1,94 @@
-# 网站基本信息
-title: "我的技术博客"
-description: "记录编程学习、技术分享与生活感悟"
-author: "你的名字"
-email: "你的邮箱@example.com"
+theme: jekyll-theme-chirpy
 
-# 网站基础配置
-baseurl: "" # 保持为空，因为我们使用根域名
-url: "https://你的用户名.github.io"
+url: "https://alanwi.github.io"
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
 
-# 构建配置
-markdown: kramdown
-theme: minima # GitHub Pages 默认主题，简单易用
-plugins:
-  - jekyll-feed # 生成 RSS 订阅
-  - jekyll-seo-tag # 优化搜索引擎
-  - jekyll-paginate # 文章分页
+title: Alan's Blog
+tagline: 技术 · 项目 · 生活
+description: >-
+  记录编程学习、技术分享、项目实践与生活感悟的个人博客。
 
-# 分页配置
-paginate: 10 # 每页显示10篇文章
-paginate_path: "/page:num/"
+social:
+  name: Alan
+  email: ""
+  links:
+    - https://github.com/AlanWi
 
-# 文章永久链接格式
-permalink: /:year/:month/:day/:title/
+github:
+  username: AlanWi
 
-# 排除不需要构建的文件
+avatar: /assets/img/avatar.jpg
+
+theme_mode: # "" = system preference, "light", "dark"
+
+toc: true
+
+paginate: 10
+
+permalink: /posts/:title/
+
+# Disqus / Utterances / Giscus
+comments:
+  active: # empty = disabled
+  disqus:
+    shortname: ""
+  utterances:
+    repo: ""
+    issue_term: ""
+  giscus:
+    repo: ""
+    repo_id: ""
+    category: ""
+    category_id: ""
+    mapping: ""
+    strict: ""
+    input_position: ""
+    lang: zh-CN
+    reactions_enabled: ""
+
+google_analytics:
+  id: ""
+
+# ----- Collections: tabs -----
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+# ----- Defaults -----
+defaults:
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      dynamic_title: true
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /posts/:title/
+  - scope:
+      path: assets/img/favicons
+    values:
+      swcache: true
+
+# ----- Archives plugin -----
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
+
 exclude:
   - README.md
+  - vendor
+  - tools
   - Gemfile
   - Gemfile.lock
