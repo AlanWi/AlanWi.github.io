@@ -64,6 +64,7 @@ defaults:
       type: tabs
     values:
       layout: page
+      permalink: /:title/
       dynamic_title: true
   - scope:
       path: ""
