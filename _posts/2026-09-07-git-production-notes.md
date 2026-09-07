@@ -1,5 +1,6 @@
 ---
 title: Git 生产环境实战笔记
+description: "从工作区、暂存区和分支模型出发，梳理日常开发中的提交、同步与协作流程，并结合冲突处理和误操作恢复场景，说明如何选择合适的 Git 命令。"
 date: 2026-09-07
 categories:
   - 技术分享
@@ -7,7 +8,6 @@ tags:
   - Git
   - 版本控制
   - 工程实践
-  - AI Infra
 mermaid: true
 published: false
 toc: true
