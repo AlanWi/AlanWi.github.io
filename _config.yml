@@ -29,6 +29,18 @@ paginate: 10
 
 permalink: /posts/:title/
 
+# Chirpy requires Rouge's block formatter to preserve code whitespace
+# when its HTML compression layout processes highlighted code.
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
 # Disqus / Utterances / Giscus
 comments:
   active: # empty = disabled
