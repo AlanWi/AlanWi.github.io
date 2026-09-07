@@ -34,9 +34,35 @@ jobs:
           ruby-version: "3.4"
           bundler-cache: true
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: "11.19.0"
+
+      - name: Install validation dependencies
+        run: |
+          pnpm --dir tools install --frozen-lockfile --ignore-scripts
+          pnpm --dir tools exec playwright install --with-deps chromium
+
+      - name: Check article metadata and code blocks
+        run: bundle exec ruby tools/check_posts.rb
+
+      - name: Build preview for validation (including drafts)
+        run: bundle exec jekyll build --strict_front_matter --unpublished --drafts --future -d .jekyll-check
+
+      - name: Check local images and render Mermaid diagrams
+        run: |
+          bundle exec ruby tools/check_site.rb .jekyll-check
+          node tools/check_mermaid.cjs .jekyll-check/mermaid.json
+
       - name: Build site
         run: |
-          bundle exec jekyll b -d "_site"
+          bundle exec jekyll build --strict_front_matter -d "_site"
         env:
           JEKYLL_ENV: "production"
 

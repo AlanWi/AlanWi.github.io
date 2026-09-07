@@ -1,0 +1,8 @@
+{
+  "name": "blog-validation",
+  "private": true,
+  "dependencies": {
+    "mermaid": "11.13.0",
+    "playwright": "1.62.1"
+  }
+}

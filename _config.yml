@@ -71,6 +71,7 @@ defaults:
       type: posts
     values:
       layout: post
+      toc: true
       permalink: /posts/:title/
   - scope:
       path: assets/img/favicons
@@ -94,3 +95,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - .github
+  - .jekyll-check
+  - "_posts/note skill.md"
+  - "**/.obsidian/**"

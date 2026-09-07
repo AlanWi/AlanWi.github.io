@@ -2,6 +2,14 @@
 _site/
 .jekyll-cache/
 .jekyll-metadata
+.jekyll-check/
+
+# Local writing notes and Obsidian settings
+note skill.md
+.obsidian/
+
+# Validation dependencies
+node_modules/
 
 # Bundler
 vendor/
