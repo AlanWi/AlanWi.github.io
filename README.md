@@ -1,6 +1,10 @@
-# AlanWi.github.io
+# wwei's Blog
 
 基于 Jekyll / Chirpy 的个人博客。
+
+站点地址：https://alanwi.github.io 。网站显示名称使用 `wwei`，GitHub 仓库仍属于 `AlanWi` 账号。
+
+`_includes/head.html` 覆盖主题的同名模板，为中文或自定义页面标题增加回退值。升级 Chirpy 时应核对该模板与上游的差异。
 
 ## 写作与预览
 

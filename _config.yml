@@ -5,13 +5,13 @@ baseurl: ""
 lang: zh-CN
 timezone: Asia/Shanghai
 
-title: WWei's Blog
+title: wwei's Blog
 tagline: 学习 · 项目 · 生活
 description: >-
   一万年太久，只争朝夕。
 
 social:
-  name: Alan
+  name: wwei
   email: ""
   links:
     - https://github.com/AlanWi
